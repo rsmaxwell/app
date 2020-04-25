@@ -103,6 +103,8 @@ public class App {
 		Model model = new Model(config);
 		Populations populations = model.run();
 
-		populations.output_svg(filter, outputDirectory);
+		int width = 800;
+		int height = 400;
+		populations.output_svg(outputDirectory, filter, width, height);
 	}
 }

@@ -9,19 +9,17 @@ import java.util.Map;
 import com.google.gson.Gson;
 import com.rsmaxwell.infection.model.config.Config;
 import com.rsmaxwell.infection.model.config.Connector;
+import com.rsmaxwell.infection.model.config.Connectors;
 import com.rsmaxwell.infection.model.config.Group;
+import com.rsmaxwell.infection.model.config.Groups;
 import com.rsmaxwell.infection.model.config.Pair;
 
 public class AppConfig {
 
-	public double iStart;
 	public double maxTime;
-	public double transmission;
 	public int resolution;
 	public String integrationMethod;
 
-	public transient double sStart;
-	public transient double rStart;
 	public transient Map<String, Group> groups = new HashMap<String, Group>();
 	public transient Map<Pair, Connector> connectors = new HashMap<Pair, Connector>();
 
@@ -97,16 +95,14 @@ public class AppConfig {
 	public Config toConfig() throws Exception {
 
 		Config config = new Config();
-		config.iStart = iStart;
 		config.maxTime = maxTime;
-		config.transmission = transmission;
 		config.resolution = resolution;
 		config.integrationMethod = integrationMethod;
-		config.sStart = sStart;
-		config.rStart = rStart;
-		config.groups = new HashMap<String, Group>(groups);
-		config.connectors = new HashMap<Pair, Connector>(connectors);
+		config.groups = new Groups(groups);
+		config.connectors = new Connectors(connectors);
 
-		return config.init();
+		config.setInstance();
+
+		return config.validate();
 	}
 }

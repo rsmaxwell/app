@@ -108,6 +108,6 @@ public class App {
 		File file = new File(outputDirectory, "text.txt");
 		FileOutputStream stream = new FileOutputStream(file);
 		PrintStream out = new PrintStream(stream);
-		populations.print(filter, out);
+		populations.print(out, filter);
 	}
 }

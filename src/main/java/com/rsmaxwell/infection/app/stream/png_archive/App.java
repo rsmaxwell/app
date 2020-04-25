@@ -106,7 +106,10 @@ public class App {
 
 		File file = new File(outputDirectory, "png.zip");
 		FileOutputStream stream = new FileOutputStream(file);
-		populations.output_png_archive(filter, stream);
+
+		int width = 800;
+		int height = 400;
+		populations.output_png_archive(stream, filter, width, height);
 		stream.close();
 	}
 }

@@ -106,7 +106,10 @@ public class App {
 
 		File file = new File(outputDirectory, "output.svg");
 		FileOutputStream stream = new FileOutputStream(file);
-		populations.output_svg(filter, stream);
+
+		int width = 800;
+		int height = 400;
+		populations.output_svg(stream, filter, width, height);
 		stream.close();
 	}
 }

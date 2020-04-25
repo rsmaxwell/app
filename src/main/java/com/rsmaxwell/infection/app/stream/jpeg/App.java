@@ -106,7 +106,10 @@ public class App {
 
 		File file = new File(outputDirectory, "output.jpeg");
 		FileOutputStream stream = new FileOutputStream(file);
-		populations.output_jpeg(filter, stream);
+
+		int width = 800;
+		int height = 400;
+		populations.output_jpeg(stream, filter, width, height);
 		stream.close();
 	}
 }

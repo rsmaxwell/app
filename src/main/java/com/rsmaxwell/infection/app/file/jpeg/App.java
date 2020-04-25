@@ -103,6 +103,8 @@ public class App {
 		Model model = new Model(config);
 		Populations populations = model.run();
 
-		populations.output_jpeg(filter, outputDirectory);
+		int width = 800;
+		int height = 400;
+		populations.output_jpeg(outputDirectory, filter, width, height);
 	}
 }

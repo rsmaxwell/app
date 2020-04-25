@@ -86,6 +86,6 @@ public class App {
 		Model model = new Model(config);
 		Populations populations = model.run();
 
-		populations.print(filter, System.out);
+		populations.print(System.out, filter);
 	}
 }

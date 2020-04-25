@@ -86,6 +86,6 @@ public class App {
 		Model model = new Model(config);
 		Populations populations = model.run();
 
-		populations.toJson(filter, System.out);
+		populations.toJson(System.out, filter);
 	}
 }
