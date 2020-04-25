@@ -105,7 +105,7 @@ public class App {
 		Model model = new Model(config);
 		Populations populations = model.run();
 
-		File file = new File(outputDirectory, "text.txt");
+		File file = new File(outputDirectory, "output.txt");
 		FileOutputStream stream = new FileOutputStream(file);
 		PrintStream out = new PrintStream(stream);
 		populations.print(out, filter);

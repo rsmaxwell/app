@@ -104,7 +104,7 @@ public class App {
 		Model model = new Model(config);
 		Populations populations = model.run();
 
-		File file = new File(outputDirectory, "jpeg.zip");
+		File file = new File(outputDirectory, "output.jpeg.zip");
 		FileOutputStream stream = new FileOutputStream(file);
 
 		int width = 800;
