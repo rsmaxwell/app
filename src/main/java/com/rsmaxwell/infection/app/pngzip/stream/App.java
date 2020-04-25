@@ -105,11 +105,10 @@ public class App {
 		Populations populations = model.run();
 
 		File file = new File(outputDirectory, "output.png.zip");
-		FileOutputStream stream = new FileOutputStream(file);
-
-		int width = 800;
-		int height = 400;
-		populations.output_pngzip(stream, filter, width, height);
-		stream.close();
+		try (FileOutputStream stream = new FileOutputStream(file)) {
+			int width = 800;
+			int height = 400;
+			populations.output_pngzip(stream, filter, width, height);
+		}
 	}
 }
