@@ -1,5 +1,5 @@
 {
    "maxTime":20,
-   "resolution":1000,
-   "integrationMethod": "com.rsmaxwell.infection.model.integrate.RungeKutta"
+   "resolution":10,
+   "integrationMethod": "com.rsmaxwell.infection.model.integrate.Euler"
 }

@@ -14,8 +14,8 @@ import org.apache.commons.cli.ParseException;
 import com.rsmaxwell.infection.app.AppConfig;
 import com.rsmaxwell.infection.model.app.Version;
 import com.rsmaxwell.infection.model.config.Config;
-import com.rsmaxwell.infection.model.model.Model;
-import com.rsmaxwell.infection.model.model.Populations;
+import com.rsmaxwell.infection.model.engine.Engine;
+import com.rsmaxwell.infection.model.engine.Populations;
 
 public class App {
 
@@ -100,7 +100,7 @@ public class App {
 
 		String[] filter = line.getOptionValues("f");
 
-		Model model = new Model(config);
+		Engine model = new Engine(config);
 		Populations populations = model.run();
 		populations.toJson(outputDirectory, filter);
 	}
