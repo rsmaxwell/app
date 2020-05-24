@@ -1,0 +1,22 @@
+{
+   "maxTime":20,
+   "groups":{
+      "1":{
+         "name":"everyone",
+         "recovery":0.23,
+         "population":10,
+         "iStart":0.01
+      }
+   },
+   "connectors":{
+      "default":{
+         "transmissionScript": "foo"
+      }
+   },
+   "output": {
+      "format": "png",
+      "filter": [ "All" ],
+      "width": 800,
+      "height": 400
+   } 
+}
