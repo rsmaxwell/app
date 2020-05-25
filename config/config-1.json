@@ -5,7 +5,8 @@
          "name":"everyone",
          "recovery":0.23,
          "population":10,
-         "iStart":0.01
+         "iStart":0.48,
+         "rStart":0.2
       }
    },
    "connectors":{
