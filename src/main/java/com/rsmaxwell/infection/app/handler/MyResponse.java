@@ -6,9 +6,9 @@ import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.nio.charset.StandardCharsets;
 
-import com.rsmaxwell.infection.model.handler.MyResponseInterface;
+import com.rsmaxwell.infection.model.handler.MyResponseAbstract;
 
-public class MyResponse implements MyResponseInterface {
+public class MyResponse extends MyResponseAbstract {
 
 	private ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
 
