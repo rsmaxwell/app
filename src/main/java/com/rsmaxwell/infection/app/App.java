@@ -21,7 +21,7 @@ import com.rsmaxwell.infection.app.handler.HandlerStdout;
 import com.rsmaxwell.infection.app.handler.HandlerSwingImage;
 import com.rsmaxwell.infection.app.handler.HandlerSwingSVG;
 import com.rsmaxwell.infection.app.handler.HandlerTextFile;
-import com.rsmaxwell.infection.app.handler.MyResponse;
+import com.rsmaxwell.infection.app.handler.ResponseCollector;
 import com.rsmaxwell.infection.model.app.MySecurityManager;
 import com.rsmaxwell.infection.model.app.Version;
 import com.rsmaxwell.infection.model.config.Config;
@@ -143,7 +143,7 @@ public class App {
 		}
 
 		Engine engine = new Engine(config);
-		MyResponse response = new MyResponse();
+		ResponseCollector response = new ResponseCollector();
 		engine.run(response);
 		byte[] array = response.getArray();
 
